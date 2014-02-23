@@ -10,6 +10,7 @@ cd ghc-7.6.3/
 ./configure # --prefix=$HOME/ghc --with-gmp-libraries=$HOME/usr/lib
 make install
 cd ..
+rm -r ghc-7.6.3/
 
 # GHC space trimming (risky business)
 
@@ -53,6 +54,7 @@ curl --silent http://hackage.haskell.org/package/cabal-install-1.18.0.2/cabal-in
 cd cabal-install-1.18.0.2/
 sh bootstrap.sh
 cd ..
+rm -r cabal-install-1.18.0.2/
 
 ln -s /.cabal/bin/cabal /usr/local/bin
 cabal update
