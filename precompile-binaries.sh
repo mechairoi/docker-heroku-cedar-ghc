@@ -5,7 +5,7 @@
 # ln -s /usr/lib/libgmp.so.3 $HOME/usr/lib/libgmp.so
 
 # ghc
-curl --silent http://www.haskell.org/ghc/dist/7.6.3/ghc-7.6.3-x86_64-unknown-linux.tar.bz2|tar xj
+# curl --silent http://www.haskell.org/ghc/dist/7.6.3/ghc-7.6.3-x86_64-unknown-linux.tar.bz2|tar xj
 cd ghc-7.6.3/
 ./configure # --prefix=$HOME/ghc --with-gmp-libraries=$HOME/usr/lib
 make install
@@ -43,9 +43,9 @@ strip --strip-unneeded $HOME/ghc/lib/ghc-7.6.3/{run,}ghc
 
 
 # ldconfig for linker hack
-ghc-pkg describe base > base.package.conf
-sed -i "s/ld-options:/ld-options:\ -L\/app\/usr\/lib/" base.package.conf
-ghc-pkg update base.package.conf
+# ghc-pkg describe base > base.package.conf
+# sed -i "s/ld-options:/ld-options:\ -L\/app\/usr\/lib/" base.package.conf
+# ghc-pkg update base.package.conf
 
 # cabal-install
 curl --slient http://hackage.haskell.org/package/cabal-install-1.18.0.2/cabal-install-1.18.0.2.tar.gz|tar xz
