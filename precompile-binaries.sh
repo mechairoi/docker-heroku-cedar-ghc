@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 # libgmp hack
 # mkdir -p $HOME/usr/lib
