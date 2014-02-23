@@ -36,10 +36,10 @@ find /usr/local/lib -name "*HS*.o" -delete
 find /usr/local/lib -name "*_debug.a" -delete
 
 # Don't need man or doc
-rm -rf $HOME/ghc/share
+rm -rf /usr/local/lib/share
 
 # Strip binaries
-strip --strip-unneeded $HOME/ghc/lib/ghc-7.6.3/{run,}ghc
+strip --strip-unneeded /usr/local/lib/ghc-7.6.3/{run,}ghc
 
 
 # ldconfig for linker hack
@@ -48,7 +48,7 @@ strip --strip-unneeded $HOME/ghc/lib/ghc-7.6.3/{run,}ghc
 # ghc-pkg update base.package.conf
 
 # cabal-install
-curl --slient http://hackage.haskell.org/package/cabal-install-1.18.0.2/cabal-install-1.18.0.2.tar.gz|tar xz
+curl --silent http://hackage.haskell.org/package/cabal-install-1.18.0.2/cabal-install-1.18.0.2.tar.gz|tar xz
 # curl --silent http://hackage.haskell.org/packages/archive/cabal-install/1.18.0.2/cabal-install-1.18.0.2.tar.gz|tar xz
 cd cabal-install-1.18.0.2/
 sh bootstrap.sh
