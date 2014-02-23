@@ -56,6 +56,7 @@ sh bootstrap.sh
 cd ..
 
 ln -s /.cabal/bin/cabal /usr/local/bin
+cabal update
 # export PATH=$PATH:$HOME/.cabal
 
 # Install a binary that Yesod needs separately
