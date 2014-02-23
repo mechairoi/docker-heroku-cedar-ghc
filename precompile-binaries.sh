@@ -2,7 +2,6 @@
 set -e
 
 # libgmp hack
-# mkdir -p $HOME/usr/lib
 ln -s /usr/lib/libgmp.so.3 /usr/lib/libgmp.so
 
 # ghc
@@ -57,7 +56,8 @@ cd ..
 
 ln -s /.cabal/bin/cabal /usr/local/bin
 cabal update
-# export PATH=$PATH:$HOME/.cabal
+cabal install happy
+echo 'export PATH=$PATH:/.cabal' >> /root/.profile
 
 # Install a binary that Yesod needs separately
 # cabal update
