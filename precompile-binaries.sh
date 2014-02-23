@@ -57,7 +57,7 @@ cd ..
 ln -s /.cabal/bin/cabal /usr/local/bin
 cabal update
 cabal install happy
-echo 'export PATH=$PATH:/.cabal' >> /root/.profile
+echo 'export PATH=$PATH:/.cabal/bin' >> /root/.profile
 
 # Install a binary that Yesod needs separately
 # cabal update
