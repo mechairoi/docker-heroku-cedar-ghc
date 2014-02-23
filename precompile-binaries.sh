@@ -3,7 +3,7 @@ set -e
 
 # libgmp hack
 # mkdir -p $HOME/usr/lib
-# ln -s /usr/lib/libgmp.so.3 $HOME/usr/lib/libgmp.so
+ln -s /usr/lib/libgmp.so.3 /usr/lib/libgmp.so
 
 # ghc
 # curl --silent http://www.haskell.org/ghc/dist/7.6.3/ghc-7.6.3-x86_64-unknown-linux.tar.bz2|tar xj
